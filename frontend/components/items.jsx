@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
-import styled from "styled-components";
-import Item from "./item";
+import React, { Component } from 'react';
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
+import styled from 'styled-components';
+import Item from './item';
 
 const ALL_ITEMS_QUERY = gql`
   query ALL_ITEMS_QUERY {
@@ -50,3 +50,5 @@ export default class Items extends Component {
     );
   }
 }
+
+export { ALL_ITEMS_QUERY };
