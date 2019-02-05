@@ -1,4 +1,4 @@
-import Items from '../components/Items'
+import Items from '../components/items'
 const Home = props => (
     <div>
         <Items />
