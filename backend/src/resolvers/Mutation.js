@@ -58,10 +58,17 @@ const Mutations = {
       {
         where
       },
-      `{ id title}`
+      `{ id title user {id}}`
     );
     // 2. Check if they own that item, or have the permissions
-    // TODO
+    const ownsItem = item.user.id === ctx.request.userId;
+    const hasPermissions = ctx.request.user.permissions.some(permission =>
+      ['ADMIN', 'ITEMDELETE'].includes(permission)
+    );
+    if (!ownsItem && hasPermissions) {
+      throw new Error("You don't have permission to do that!");
+    }
+
     // 3. Delete it!
     return ctx.db.mutation.deleteItem(
       {
