@@ -4,7 +4,7 @@ import Signin from './Signin';
 
 const PleaseSignIn = props => (
   <Query>
-    {(data, loading) => {
+    {({ data, loading }) => {
       if (loading) return <p>Loading...</p>;
       if (!data.me) {
         return (
