@@ -17,7 +17,7 @@ const RESET_MUTATION = gql`
 `;
 
 export default class Reset extends Component {
-  static propTypes = {
+  static PropTypes = {
     resetToken: Proptypes.string.isRequired
   }
   state = {
