@@ -1,3 +1,3 @@
 # Clothes Store
 
-Full JavaScript project (In Progress).
+Full JavaScript Project (In Progress).
